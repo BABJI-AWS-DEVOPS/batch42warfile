@@ -1,0 +1,11 @@
+node('master') 
+{
+    stage('CD-Stage1') 
+    {
+    git 'https://github.com/BABJI-AWS-DEVOPS/batch42warfile.git'
+    }
+    stage('CD-Stage2') 
+    {
+    sh 'mvn package'
+    }
+}
